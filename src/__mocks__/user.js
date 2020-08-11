@@ -45,6 +45,11 @@ export default ({fetchMock, delay, mock, toSuccess, toError}) => {
         path: '/dashboard',
       },
       {
+        name: '我的测试',
+        icon: 'DashboardOutlined',
+        path: '/mytest',
+      },
+      {
         name: '组件',
         icon: 'DesktopOutlined',
         path: '/component',

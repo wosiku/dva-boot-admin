@@ -15,6 +15,7 @@ const { Link } = router;
 const Option = Select.Option;
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
+console.log(Menu, 'Menu', SubMenu);
 
 // Allow menu.js config icon as string or ReactNode
 //   icon: 'setting',
@@ -155,6 +156,7 @@ class LeftSideBar extends PureComponent {
   // Get the currently selected menu
   getSelectedMenuKeys = () => {
     const pathname = this.props.location.pathname;
+    console.log(this.props.flatMenu, 'this.props.flatMenu');
     const selectMenu = getMeunMatchKeys(this.props.flatMenu, pathname)[0];
     return selectMenu ? [selectMenu.path] : [];
   };
@@ -187,7 +189,7 @@ class LeftSideBar extends PureComponent {
       user,
       isMobile
     } = this.props;
-
+    console.log(menu, 'menu---');
     const classnames = cx('sidebar-left', 'sidebar-default', {
       affix: !!fixed,
       'sidebar-left-sm': collapsed,

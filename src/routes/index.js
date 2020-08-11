@@ -12,6 +12,7 @@ import LevelRoute from './Widgets/LevelRoute';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
+import MyTest from './MyTest';
 import Blank from './Blank';
 import Toolbar from './Widgets/Toolbar';
 import BaseComponent from './Widgets/BaseComponent';
@@ -44,6 +45,7 @@ import Image from './UI/Image';
  * childRoutes 所有子路由
  * NotFound 路由要放到最下面，当所有路由当没匹配到时会进入这个页面
  */
+console.log(Dashboard(), 'Dashboard()', MyTest());
 const routesConfig = app => [
   {
     path: '/sign',
@@ -63,6 +65,7 @@ const routesConfig = app => [
     indexRoute: '/dashboard',
     childRoutes: [
       Dashboard(app),
+      MyTest(app),
       Blank(app),
       Toolbar(app),
       Column(),
